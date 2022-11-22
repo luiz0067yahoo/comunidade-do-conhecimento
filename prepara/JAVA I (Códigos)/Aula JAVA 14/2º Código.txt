@@ -1,0 +1,15 @@
+try {
+Class.forName("com.mysql.jdbc.Driver");
+Connection con = DriverManager.getConnection(url,user,pass);
+System.out.println("ok");
+Statement stm = con.createStatement();
+String SQL = "Selected * from clientes";
+ResultSet rs = stm.executedQuery(SQL);
+while(rs.next())
+{
+	
+	Código comentado:
+try {
+Class.forName("com.mysql.jdbc.Driver");
+Connection con = DriverManager.getConnection(url,user,pass);
+System.out.println("ok");

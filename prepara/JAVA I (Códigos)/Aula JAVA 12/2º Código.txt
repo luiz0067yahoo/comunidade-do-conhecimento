@@ -1,0 +1,10 @@
+import java.applet.Applet;
+import java.awt.Graphics;
+public class MostraPrepara extends Applet
+{
+public void paint(Graphics g)
+{
+g.drawString("Prepara Cursos Profissionalizantes", 300,200);
+}
+}
+

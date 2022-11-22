@@ -1,0 +1,26 @@
+public class AnimaisComendo {
+	public void comer(){
+		System.out.printIn("Animal Comendo...");
+		}
+}
+class Cao extends AnimaisComendo {
+	public void comer (){
+		System.out.printIn("Cão Comendo...");
+			}
+}
+class Tigre extends AnimaisComendo {
+	public void comer (){
+		System.out.printIn("Tigre Comendo...");
+	}
+}
+class Test {
+public void fazerAnimalComer(AnimaisComendo animaiscomendo){
+animaiscomendo.comer();
+}
+public static void main (String[] args){
+Test t = new Test ();
+t.fazerAnimalComer(new AnimaisComendo ());
+t.fazerAnimalComer(new Cao());
+t.fazerAnimalComer(new Tigre());
+}
+}

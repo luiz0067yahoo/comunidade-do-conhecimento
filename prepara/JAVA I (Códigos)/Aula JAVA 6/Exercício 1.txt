@@ -1,0 +1,26 @@
+public class XXXXXXX {
+public void XXXXXXX() {
+System.out.printIn("...Teste de Aceleração...");
+}
+}
+class XXXXXX extends XXXXXXXX {
+public void XXXXXXX (){
+System.out.printIn("XXXXXXXXXX...");
+}
+}
+class XXXXXX extends XXXXXX {
+public void XXXXXX (){
+System.out.printIn("XXXXXXXXXXX...");
+}
+}
+class XXXXX {
+public void XXXXXXXXX(XXXXXXX XXXXXXXXX){
+xxxxxxxx.xxxxxxxxxx();
+}
+public static void main (String[] args){
+XXXX t = new XXX ();
+t.XXXXXXXXXXX(new XXXXXXXXXX ());
+t.XXXXXXXXXXX(new XXXXX());
+t.XXXXXXXXXXX(new XXXXX());
+}
+}

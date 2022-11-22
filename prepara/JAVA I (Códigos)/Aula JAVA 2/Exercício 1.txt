@@ -1,0 +1,11 @@
+public class XXXXXXXXXXX {
+	public static void main(String[] args) {
+		int XXXXX = XX;
+		if (XXXXX < XX) {
+			System.out.println("Não pode entrar");
+}
+		else {
+			System.out.println("Pode entrar");
+		}
+	}
+}

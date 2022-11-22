@@ -1,0 +1,8 @@
+public class PreparaCursos {
+ public static void main (String args[])
+	{
+	System.out.println("Estudo na melhor do Brasil!!!");
+
+	System.exit (0);
+	}
+}

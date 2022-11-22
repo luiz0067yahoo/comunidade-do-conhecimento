@@ -1,0 +1,19 @@
+Class XXXX {
+int XXXXXX;
+
+String XXXXX;
+
+double XXXXX;
+double XXXXX;
+
+}
+clas XXXXXX {
+public static void main(String[] args) {
+
+XXXX XXXXXXXX;
+XXXXX = new XXXXX();
+XXXXX.XXXXX = "Duke";
+XXXXXX.XXXX = 5.000;
+System.out.printIn("Saldo atual: "+ XXXXXX.XXXXX);
+}
+}

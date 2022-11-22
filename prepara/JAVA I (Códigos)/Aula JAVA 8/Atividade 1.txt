@@ -1,0 +1,115 @@
+// Demonstra JDesktopPane e JInternalFrame
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class XXXXXXXXXXX extends JFrame {
+private JDesktopPane desktop;
+// configura a GUI
+public TesteJDesktop()
+{
+super( "XXXXXXXXXX " + "XXXXXXXXXXXXXXX" );
+
+// cria barra de menus
+JMenuBar barra = new JMenuBar();
+// cria menu "Arquivo"
+JMenu arquivo = new JMenu(" Arquivo");
+//cria itens do menu "Arquivo"
+JmenuItem novo = new JMenuItem( "Novo" );
+
+
+JMenuItem sair = new JMenuItem( "Sair" );
+// anexa os itens ao menu "Arquivo"
+arquivo.add( novo );
+arquivo.add( sair );
+
+// anexa o menu "Arquivo" à barra de menus
+barra.add( novo );
+arquivo.add(sair );
+
+// anexa o menu "Arquivo" à barra de menus
+barra.add( arquivo );
+
+// anexa a barra de menus à janela do aplicativo
+setJMenuBar( barra );
+
+// configura a "desktop"
+desktop = new JDesktopPane();
+desktop.setBackgroud(Color.lightGray);
+desktop.setToolTipText("Eu sou a JDesktopPane. " +
+"Você pode utilizar meu menu.");
+this.getContentPane().add( desktop );
+// configura ouvinte para o item de menu "Novo"
+novo.addActionListener(
+
+// clesse interna anônima para tratar eventos do
+// item de menu "Novo"
+new ActionListener() {
+
+// exibe nova janela interna
+public void actionPerformed( ActionEvent evento ) {
+
+// cria a janela interna
+JInternalFrame frame = new JIntenalFrame( "Janela Interna", true, true, true, true);
+
+// obtém painel de conteúdo da janela interna
+Container container = frame.getContentPane();
+
+JanelaInterna interna = new JanelaInterna();
+// anexa ao painel de conteúdo da janela interna
+//um objeto da classe "JanelaInterna"
+container.add( interna, BorderLayout.CENTER );
+// configura o tamanho da janela interna com o tamanho
+// do seu conteúdo
+frame.pack();
+
+// anexa a janela interna à "Desktop" e a exibe
+desktop.add( frame );
+frame.setVisible( true );
+}
+}
+);
+//configura ouvinte para o item de menu "Sair"
+sair.addActionListener() {
+
+// classe interna anônima para tratar eventos do item de menu "Sair"
+new ActionListener() {
+// encerra o aplicativo
+public void actionPerformed( ActionEvent evento ) {
+
+System.exit( 0 );
+}
+}
+);
+// determina o tamanho da janela do aplicativo
+setSize( 700, 600 );
+// determina que o conteúdo anexado à janela seja exibido
+setVisible( true );
+}
+
+// executa a aplicação
+public static void main( String args[] )
+{
+TesteJDesktop aplicacao = new TesteJDesktop();
+aplicacao.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE );
+}
+}
+
+class JanelaInterna extends JPanel{
+ private JTextArea areaTexto;
+public JanelaInterna()
+{
+// cria uma área de texto
+areaTexto = new JTextArea(25,25);
+// configura mudança automática de linha
+areaTexto.setLineWrap(true);
+// determina que as mudança de linha seja definida pelas palavras
+areaTexto.setWrapStyleWord(true);
+// configura o texto a ser exibido
+areaTexto.setText("Eu sou aluno da Prepara Cursos Profissionalizantes " +
+"Estou apredendo a desenvolver curso em Java"+
+"Boa Aula e aproveite muito o conteúdo desse curso" );
+// adiciona barras de rolagem se o tamanho da
+// da área de texto for insuficiente para exibir o texto
+this.add(new JScrollPane(areaTexto));
+ }
+}

@@ -1,0 +1,8 @@
+String id = rs.getString("id");
+	String Nome = rs.getString("Nome");
+
+JOptionPane.showMessageDialog(null,"id:"+id+"\n"+"Nome:"+ Nome);
+	System.out.println("id: "+id);
+	System.out.println("Nome: "+Nome);
+}
+}

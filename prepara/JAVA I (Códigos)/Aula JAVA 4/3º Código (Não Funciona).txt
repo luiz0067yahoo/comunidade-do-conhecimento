@@ -1,0 +1,17 @@
+class Conta {
+int numero;
+Conta c1;
+Conta c2;
+double deposita;
+double saldo;
+}
+class MovContaCorrente {
+public static void main(String args[]) {
+Conta c1 = new Conta();
+c1.deposita = 200;
+Conta c2 = c1;
+c2.deposita = 100;
+System.out.printIn(c1.deposita);
+System.out.printIn(c2.deposita);
+}
+}

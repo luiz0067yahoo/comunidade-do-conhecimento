@@ -1,0 +1,12 @@
+listaDeCores.addListSelectionListener
+new ListSelectionListener() { 
+public void valueChanged ( ListSelectionEvent evento)
+{
+esquerda.setBackground(
+cores[ listaDeCores.getSelectedIndex()]);
+}
+}
+);
+setSize( 400,250); 
+setVisible(true);
+}

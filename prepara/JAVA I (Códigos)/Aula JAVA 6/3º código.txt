@@ -1,0 +1,9 @@
+Import javax.swing.JOptionPane;
+public class AlunoPrepara {
+ public static void main ( String args [] )
+  {
+JOptionPane.showMessageDialog(null, "Sou Aluno da Prepara");
+ JOptionPane.showMessageDialog(null, "A Melhor do Brasil");
+	System.exit (0);
+	}
+}

@@ -1,0 +1,21 @@
+public class XXXXXXXXXXX {
+	public float x,y;
+	public XXXXXXX(float ax,float ay) // sempre omita o valor de retorno!
+{
+	this.x=ax; this.y=ay;
+}
+	public void move(float dx,float dy)
+{
+this.x+=dx; this.y+=dy;
+}
+public void mostra()
+{
+ System.out.printIn("("+this.x+","+this.y+")");
+}
+}
+class XXXXXXX {
+public static void main(String args[]) {
+ XXXXXXXXap;
+ap=new XXXXXXXXX((float)0.0,(float)0.0);
+ap.mostra();
+ap.move(1,1);

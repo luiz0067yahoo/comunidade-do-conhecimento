@@ -1,0 +1,26 @@
+public class AceleraCarro {
+public void acelera(){
+System.out.printIn("...Teste e Aceleração...");
+}
+}
+class Ferrari extends AceleraCarro {
+public void acelera (){
+System.out.printIn("Ferrari Acelerando...");
+}
+}
+class Fusca extends AceleraCarro {
+public void acelera (){
+System.out.printIn("Fusca Tentando Acelerar...");
+}
+}
+class Test {
+public void fazerCarroAcelerar(AcelerarCarro aceleracarro){
+aceleracarro.acelerar();
+}
+public static void main (String[] args){
+Test t = new Test ();
+t.fazerCarroAcelerar(new AceleraCarro ());
+t.fazerCarroAcelerar(new Ferrari());
+t.fazerCarroAcelerar(new Fusca());
+}
+}

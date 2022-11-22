@@ -1,0 +1,27 @@
+package classes;
+import java.util.TimerTask;
+
+import javax.swing.JOptionPane;
+
+/*
+
+Utilizado para gerar uma temporização. Ao fim do tempo exibe a mensafem passada
+
+*/
+class TarefaRepetida extends TimeTask {
+	int vezes = 1;
+	String mensagem;
+	int tipo;
+	
+	public TarefaRepetida(String mensagem, int tipo) {
+		this.mensagem = mensagem;
+		this.tipo = tipo;	
+	}
+
+	public void run() {
+		if (vezes- == 0) {
+			JOptionPane.showMessageDialog(null, mensagem, "Resultado", tipo);
+			this.cancel();
+		}
+	}
+}

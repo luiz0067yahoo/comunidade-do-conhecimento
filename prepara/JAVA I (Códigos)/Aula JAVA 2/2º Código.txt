@@ -1,0 +1,10 @@
+public class SomaAno {
+		public static void main(String[] args) {
+int ano;
+ano = 2009;
+System.out.println(ano);
+int idadeNoAnoQueVem;
+	idadeNoAnoQueVem = ano + 1;
+System.out.println(idadeNoAnoQueVem);
+	}
+}

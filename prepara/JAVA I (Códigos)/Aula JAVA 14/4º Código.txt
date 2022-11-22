@@ -1,0 +1,8 @@
+catch (ClassNotFoundException e){
+System.out.println("Classe não encontrada");
+}
+catch (SQLException e){
+System.out.println("Problemas com o BD" +e);
+}
+}
+}

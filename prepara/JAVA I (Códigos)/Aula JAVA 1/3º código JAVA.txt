@@ -1,0 +1,7 @@
+import javax.swing.JOptionPane;
+public class ImprimeMensagem {
+	public static void main(String[] args) {
+		JOptionPane.showMessageDialog(null, "Prepara Cursos Profissionalizantes");
+	System.exit (0);
+	}
+}

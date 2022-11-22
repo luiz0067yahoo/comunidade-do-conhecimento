@@ -1,0 +1,175 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class TesteJMenu extends JFrame {
+private Color colorValues [] =
+{ Color.black, Color.blue, Color.red, Color.green };
+private JRadioButtonMenuItem itensDasCores[], fontes [];
+private JCheckBoxMenuItem itensDosEstilos[];
+private JLabel texto;
+private ButtonGroup umaUnicaFonte, umaUnicaCor;
+private int estilo;
+private Icon carta = new ImageIcon("figuras/carta.gif");
+private Icon figura1 = new ImageIcon("figuras/logo.jpg");
+public TesteJMenu() {
+super("Testando JMenus");
+
+Container container = getContentPane();
+container.setLayout(new FlowLayout());
+JMenu menuArquivo = new JMenu("Arquivo");
+menuArquivo.setMnemonic ('A');
+JMenuitem itemFigura1 = new JMenuItem("Figura1");
+itemFigura 1.setMnemonic('F');
+itemFigura 1.addActionListener(
+new ActionListener() {
+public void actionPerformed(ActionEvent evento) {
+inserir();
+}
+});
+
+menuArquivo.add(itemFigura1);
+JMenuItem itemSair = new JMenuItem("Sair");
+itemSair.setMnemonic('S');
+itemSair.addActionListener(
+new ActionListener() {
+public void actionPerformed(ActionEvent evento) {
+System.exit(0);
+}
+});
+menuArquivo.add(itemSair);
+JMenu menuAjuda = new JMenu("Ajuda");
+
+menuAjuda.setMnemonic('H');
+JMenuItem itemUniversitarios = new JMenuItem("Aluno");
+itemUniversitarios.setMnemonic('U');
+itemUniversitarios.addActionListener(
+new ActionListener() {
+public void action Performed(ActionEvent event){
+JOptionPane.showMessageDialog(
+TesteJMenu.this,
+"Bem Vindo a Prepara Cursos",
+"Ajuda", 
+JOptionPane.PLAIN_MESSAGE); 
+} 
+});
+
+menuAjuda.add(itemUniversitarios);
+JMenuItem itemCartas = new JMenuItem("Cartas");
+itemCartas.setMnemonic('C');
+itemCartas.addActionListener(
+new ActionListener() {
+public void actionPerformed(ActionEvent event) {
+JOptionPane.showMessageDialog(
+TesteJMenu.this,
+"Prepara Cursos",
+"Cartas",
+JOptionPane.PLAIN_MESSAGE,
+carta);
+}
+});
+
+menu Ajuda.add(itemCartas);
+JMenuBar barra = new JMenuBar(); setJMenuBar(barra);
+barra.add(menuArquivo); 
+barra.add(menuAjuda);
+JMenuformatMenu = new JMenu("Formatar"); 
+formatMenu.setMnemonic('r'); 
+String cores[] = { "Preto", "Azul", "Vermelho", "Verde" };
+JMenu menuCor = new JMenu("Cor"); 
+menuCor.setMnemonic('C');
+itens DasCores = new JRadioButtonMenuItem[cores.length];
+umaUnicaCor = new ButtonGroup();
+TratadorDeItens trat = new TratadorDeItens();
+for (int count = 0; count < cores.length; count++) {
+itens DasCores[count] = new JRadioButton MenuItem(cores[count]);
+
+menuCor.add(itensDasCores[count]);
+umaUnicaCor.add(itensDasCores[count]);
+
+itensDasCores[count].addActionListener(trat);
+}
+itensDasCores[0].setSelected(true);
+formatMenu.add(menuCor);
+formatMenu.addSeparator();
+String nomeDasFontes[] = { "Serif", "Monospaced", "SansSerif" };
+JMenu menuFonte = new JMenu("Fonte");
+menuFonte.setMnemonic('n');]); 
+
+
+.fontes = new JRadioButtonMenuItem[3];
+umaUnicaFonte = new ButtonGroup();
+for (int count = 0; count < fontes.length; count++) {
+fontes[count] = new JRadioButtonMenuItem(nomeDasFontes[count]);
+menuFonte.add(fontes[count]);
+umaUnicaFonte.add(fontes[count]);
+fontes[count].addActionListener(trat);
+}
+fontes[0].setSelected(true);
+menuFonte.addSeparator();
+String estiloNames[] = { "Bold", "Italic" };
+itensDosEstilos = new JCheckBoxMenuItem[estiloNames.length];
+TratadorDeEstilo estiloHandler = new TratadorDeEstilo();
+for (int count = 0; count < estiloNames.length; count ++){
+
+
+itensDosEstilos[count] = new JCheckBoxMenuItem(estiloNames[count]);
+menuFonte.add(itensDosEstilos[count]);
+itensDosEstilos[count].addItemListener(estiloHandler);
+}
+formatMenu.add(menuFonte);
+barra.add(formatMenu);
+texto = new JLabel("Prepara Cursos", SwingConstants.CENTER);
+texto.setForeground(colorValues[0]);
+texto.setFont(new Font("TimesRoman", Font.PLAIN, 72));
+
+container.setBackground(Color.white);
+container.add(texto);
+
+setSize(700, 500);
+setVisible(true);
+}
+
+
+public void inserir() {
+JLabel labelFigura1 = new JLabel();
+labelFigura1.setIcon(figura1);
+this.getContentPane().add(labelFigura1);
+this.repaint();
+this.show();
+}
+public static void main(String args[]) {
+TesteJMenu application = new TesteJMenu();
+application.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+}
+private class TratadorDeItens implements ActionListener {
+public void actionPerformed(ActionEvent evento) {
+for (int count = 0; count < itensDasCores.length; count++)
+if (itensDasCores[count].isSelected()) {
+texto.setForeground(colorValues[count]);
+break;
+}
+
+
+.for (int count = 0; count < fontes.length; count++)
+if (evento.getSource() == fontes[count]) {
+texto.setFont( new Font(fontes[count].getText(),
+estilo, 72));
+break;
+}
+repaint();
+}
+}
+private class TratadorDeEstilo implements ItemListener {
+public void itemStateChanged(ItemEvent item) {
+estilo = 0;
+if (itensDosEstilos[0].isSelected())
+estilo += Font.BOLD;
+if (itensDosEstilos[1].isSelected())
+estilo += Font.ITALIC;
+
+texto.setFont(new Font(texto.getFont().getName(),
+estilo, 72));
+repaint();
+}
+}
+} 

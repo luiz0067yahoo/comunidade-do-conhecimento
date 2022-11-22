@@ -1,0 +1,9 @@
+<HEAD>
+<TITLE>MostraPrepara</TITLE>
+</HEAD>
+<BODY><CENTER>
+<H1>Exemplos de Applet's em JAVA</H1>
+<APPLET CODE="applet.class"WIDTH=300 HEIGHT=200>
+</APPLET></CENTER>
+</BODY>
+</HTML>

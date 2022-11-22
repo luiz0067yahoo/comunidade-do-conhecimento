@@ -1,0 +1,13 @@
+package dao;
+import java.sql.*;
+import java.lang.*;
+import javax.swing.*;
+public class TestaConexao {
+public static void main (String args[]) throws ClassNotFoundException{
+String url = "jdbc:mysql://localhost:3306/db_teste";
+String user = "root";
+String pass = "";
+
+Código comentado:
+	String url =
+	"jdbl:mysql://localhost:3306/db_teste";

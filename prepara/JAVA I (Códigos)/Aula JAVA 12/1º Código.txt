@@ -1,0 +1,9 @@
+import java.applet.Applet;
+import java.awt.Graphics;
+public class MostraMensagem extends Applet
+{
+public void paint(Graphics g)
+{
+g.drawString("Prepara Cursos Profissionalizantes",50,25);
+}
+}

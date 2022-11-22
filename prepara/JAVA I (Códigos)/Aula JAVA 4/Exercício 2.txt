@@ -1,0 +1,15 @@
+class XXXXX {
+int XXXX;
+XXXX X1;
+XXXX X2;
+double XXXXXXX;
+double XXXXXXX;
+}
+class XXXXXXXXXX {
+public static void main(String args[]) {
+XXXX X1 = new Conta();
+x1.xxxxxxx = xxxx;
+xxxxxx x2 = x1;
+x2.xxxxxx = xxx;
+System.out.printIn(x1.xxxxxxxx);
+System.out.printIn(x2.xxxxxxxx);

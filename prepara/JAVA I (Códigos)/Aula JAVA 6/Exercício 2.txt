@@ -1,0 +1,9 @@
+Import javax.swing.JOptionPane;
+public class XXXXXXXXX {
+ public static void main ( String args [] )
+  {
+JOptionPane.showMessageDialog(null, "XXXXXXXXXXX");
+ JOptionPane.showMessageDialog(null, "XXXXXXXXXX");
+  System.exit (0);
+  }
+}

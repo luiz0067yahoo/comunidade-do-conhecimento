@@ -1,0 +1,4 @@
+Digite sua senha: 1234
+Informe e a agência: 0000
+Numero da conta: 000000
+Valor depositado: 1180

@@ -1,0 +1,87 @@
+.import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class TesteJPopupMenu extends JFrame {
+private JRadioButtonMenuItem itens[];
+private Color cores[] = { Color.blue, Color.yellow, Color.red,
+Color.green, Color.orange };
+private JPopupMenu popupMenu;
+private JPanel norte, sul, leste, oeste, centro;
+private int x = 0;
+private int y = 0;
+public TesteJPopupMenu()
+{
+super( "Testando JPopupMenu" );
+TratadorDeItem trat = new TratadorDeItem();
+String nomeDasCores[] = { "Azul", "Amarelo", "Vermelho",
+"Verde", "Laranja" };
+ButtonGroup umaCor = new ButtonGroup();
+popupMenu = new JPopupMenu();
+itens = new JRadioButtonMenuItem[ 5 ];
+Container container = getContentPane();
+container.setLayout(new BorderLayout());
+for ( int count = 1; count < itens.length; count++ ) {
+itens[ count ] = new JRadioButtonMenuItem( nomeDasCores[ count ] );
+popupMenu.add( itens[ count ] );
+umaCor.add( itens[ count ] );
+itens[ count ].addActionListener( trat );
+}
+norte = new JPanel();
+sul = new Jpanel();
+leste = new Jpanel();
+oeste = new Jpanel();
+centro = new Jpanel();
+container.add(norte, BorderLayout.NORTH);
+container.add(sul, BorderLayout.SOUTH);
+container.add(leste, BorderLayout.EAST);
+container.add(oeste, BorderLayout.WEST);
+container.add(centro, BorderLayout.CENTER);
+this.addMouseListener(
+new MouseAdapter() {
+public void mousePressed( MouseEvent evento )
+{
+verificaEventoDeDisparo( evento );
+}
+public void mouseReleased( MouseEvent evento )
+{
+verificaEventoDeDisparo( evento );
+}
+private void verificaEventoDeDisparo( MouseEvent evento )
+{
+x = evento.getX();
+y = evento.getY();
+if ( evento.isPopupTrigger() )
+{
+popupMenu.show( evento.getComponent(),
+evento.getX(), evento.getY() );
+}
+}
+}
+);
+setSize( 800, 600 );
+setVisible( true );
+}
+public static void main( String args[] )
+{
+TesteJPopupMenu aplicacao = new TesteJPopupMenu();
+aplicacao.setDefaultCloseOperation(
+JFrame.EXIT_ON_CLOSE );
+}
+public Component estou (int valorX, int valorY )
+{
+return findComponentAt( valorX, valorY);
+}
+private class TratadorDeItem implements ActionListener {
+public void actionPerformed( ActionEvent evento )
+{
+for ( int i = 0; i < itens.length; i++ )
+{
+if ( evento.getSource() == itens[ i ] ) {
+estou(x,y).setBackground( cores[ i ] );
+repaint();
+return;
+}
+}
+}
+}
+}

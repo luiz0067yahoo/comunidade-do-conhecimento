@@ -1,0 +1,12 @@
+public class XXXXXXXXX {
+	public static void main(String[] args) {
+	int XXXXX = XX;
+	boolean XXXXXXXXX = true;
+//if (idade < 18 & amigoDoDono == false) {
+if (XXXXX <18 & !XXXXXXXXX) {
+	System.out.println("Não pode entrar");
+	}
+else {
+		System.out.println("Pode entrar");
+		}
+}

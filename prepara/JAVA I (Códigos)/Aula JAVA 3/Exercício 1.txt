@@ -1,0 +1,36 @@
+public class XXXXXXXX {
+public static void main (String args [])
+{
+int XXXXXX;
+double XXXXX;
+double XXXX;
+double XXXXX;
+double XXXXX;
+double XXXXX;
+String XXXXX;
+String XXX;
+String XXXX;
+String XXXX;
+escolha = X
+while (XXXX != 0){
+total = 0;
+notasLidas = 1;
+
+quantidade = JOptionPane.showInputDialog("Qual o Número de Alunos? <entre com a número inteira>:");
+alunos = Double.parseDouble XXXXXXX);
+while (XXXXXX <= XXXXXX) {
+XXXXX = JOptionPane.showInputDialog ("Entre com a Nota:");
+XXXXXX = Double.parse.Double(nota);
+XXXX = XXXX + XXXXX;
+XXXXX = XXXXX + X;
+}
+XXXX = XXX / XXXX;
+DecimalFormat mostraDecimal = new DecimalFormat ("0");
+exibir = ("A Média da Classe é:")+mostraDecimal.format(XXXX);
+JOptionPane.showMessageDialog(null,exibir,"Média da Classe",JOptionPane.INFORMATION_MESSAGE);
+XXXXX = JOptionPane.showInputDialog("Efetuar outro Cálculo? <0=Sair / 1=Continuar>");
+XXXX = Integer.parseInt(continua);
+}
+System.exit(0);
+}
+}
